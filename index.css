@@ -1,0 +1,215 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+}
+
+.slider {
+  position: relative;
+  z-index: 1;
+  /*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+  padding: 0;
+  margin: 0;
+  height: calc(100vh-120px);
+  /*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+  /*　背景画像設定　*/
+  /*矢印の設定*/
+  /*ドットナビゲーションの設定*/
+}
+
+.slider .slider-item01 {
+  background: url(Images/PlaceHolder.jpg);
+}
+
+.slider .slider-item02 {
+  background: url(Images/PlaceHolder_2.jpg);
+}
+
+.slider .slider-item03 {
+  background: url(Images/PlaceHolder.jpg);
+}
+
+.slider .slider-item {
+  width: 100%;
+  /*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+  height: calc(100vh - 120px);
+  /*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+  background-repeat: no-repeat;
+  /*背景画像をリピートしない*/
+  background-position: center;
+  /*背景画像の位置を中央に*/
+  background-size: cover;
+  /*背景画像が.slider-item全体を覆い表示*/
+}
+
+.slider .slick-prev,
+.slider .slick-next {
+  position: absolute;
+  z-index: 3;
+  top: 42%;
+  cursor: pointer;
+  /*マウスカーソルを指マークに*/
+  outline: none;
+  /*クリックをしたら出てくる枠線を消す*/
+  border-top: 2px solid #fff;
+  /*矢印の色*/
+  border-right: 2px solid #fff;
+  /*矢印の色*/
+  height: 25px;
+  width: 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.slider .slick-prev:hover,
+.slider .slick-next:hover {
+  border-color: #0481a2;
+}
+
+.slider .slick-prev {
+  /*戻る矢印の位置と形状*/
+  left: 2.5%;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.slider .slick-next {
+  /*次へ矢印の位置と形状*/
+  right: 2.5%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.slider .slick-dots {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 0;
+  margin: -20px 0 0 0;
+}
+
+.slider .slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.slider .slick-dots button {
+  color: transparent;
+  outline: none;
+  border-width: 0;
+  padding: 0;
+  width: 8px;
+  /*ドットボタンのサイズ*/
+  height: 8px;
+  /*ドットボタンのサイズ*/
+  border-radius: 50%;
+  background: #fff;
+  /*ドットボタンの色*/
+}
+
+.slider .slick-dots .slick-active button {
+  background: #333;
+  /*ドットボタンの現在地表示の色*/
+}
+
+.nav-content {
+  margin: 10px;
+  display: block;
+}
+
+.nav-content img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 75%;
+}
+
+.nav-content p {
+  display: block;
+  text-align: center;
+  margin: 0;
+  height: 25%;
+  width: 100%;
+}
+
+.compare-nav-content {
+  position: relative;
+  height: 100%;
+  width: 25%;
+  margin: 10px;
+}
+
+.compare-nav-content img {
+  width: 100%;
+  height: 50%;
+}
+
+.compare-nav-content p {
+  text-align: center;
+}
+
+.compare-nav-content a {
+  position: relative;
+  display: block;
+  width: 120px;
+  margin: auto;
+  line-height: 40px;
+  border: 5px solid #1d663c;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.compare-nav-content a::after {
+  content: '';
+  /*絶対配置で矢印の位置を決める*/
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  translate: -50%, -50%;
+  /*矢印の形状*/
+  width: 4px;
+  height: 4px;
+  border-top: 2px solid #1d663c;
+  border-right: 2px solid #1d663c;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.compare-nav-content .compare-nav-content-topic {
+  position: absolute;
+  display: block;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  top: -20px;
+  color: #0c2b1b;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  border: 5px solid;
+  border-radius: 35px;
+  text-align: center;
+  line-height: 60px;
+}
+
+#problem {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+#problem::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-top: 20px solid transparent;
+  /* 透明 */
+  border-left: 50vw solid transparent;
+  /* 透明 */
+  border-right: 50vw solid #8b3dc5;
+  /* むらさき */
+  border-bottom: 20px solid #8b3dc5;
+  /* むらさき */
+}
+/*# sourceMappingURL=index.css.map */
