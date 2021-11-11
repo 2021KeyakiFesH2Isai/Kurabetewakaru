@@ -1,6 +1,8 @@
 body {
     margin: 0;
+    width: 100%;
 }
+
 
 .slider {
     position: relative;
@@ -165,20 +167,106 @@ body {
     }
 }
 
-#problem {
+#problem{
+    position: relative;
+    width: 100%;
+    
+    overflow: hidden;
+    background-color: #37AB69;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left:0;
+        top: 0;
+        border-top: 50px solid #f0f7f1;  /* 透明 */ 
+        border-right: 50vw solid #f0f7f1;  /* 透明 */ 
+        border-left: 50vw solid #37AB69;  /* むらさき */ 
+        border-bottom: 50px solid #37AB69;  /* むらさき */ 
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left:0;
+        bottom: 0;
+        border-top: 50px solid transparent;  /* 透明 */ 
+        border-left: 50vw solid transparent;  /* 透明 */ 
+        border-right: 50vw solid #f0f7f1;  /* むらさき */ 
+        border-bottom: 50px solid #f0f7f1;  /* むらさき */ 
+    }
+
+    a{
+        position: relative;
+        display: block;
+        width: 200px;
+        margin: auto;
+        line-height: 40px;
+        border: 5px solid #fff;
+        border-radius: 25px;
+        text-align: center;
+        
+        &::after{
+            content: '';
+            /*絶対配置で矢印の位置を決める*/
+            position: absolute;
+            top: 15px;
+            left: 10px;
+            translate: (-50%,-50%);
+            /*矢印の形状*/    
+            width: 4px;
+            height: 4px;
+            border-top: 2px solid #fff;
+            border-right: 2px solid #fff;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+#effort{
     position: relative;
     width: 100%;
     overflow: hidden;
+    background-color: #f0f7f1;
+
 
     &::after {
-        content: "";
+        content: '';
         display: block;
         position: absolute;
-        left: 0;
+        left:0;
         bottom: 0;
-        border-top: 20px solid transparent; /* 透明 */
-        border-left: 50vw solid transparent; /* 透明 */
-        border-right: 50vw solid #8b3dc5; /* むらさき */
-        border-bottom: 20px solid #8b3dc5; /* むらさき */
+        border-top: 50px solid transparent;  /* 透明 */ 
+        border-right: 50vw solid transparent;  /* 透明 */ 
+        border-left: 50vw solid #fff;  /* むらさき */ 
+        border-bottom: 50px solid #fff;  /* むらさき */ 
+    }
+
+    a{
+        position: relative;
+        display: block;
+        width: 200px;
+        margin: auto;
+        line-height: 40px;
+        border: 5px solid #1d663c;
+        border-radius: 25px;
+        text-align: center;
+        
+        &::after{
+            content: '';
+            /*絶対配置で矢印の位置を決める*/
+            position: absolute;
+            top: 15px;
+            left: 10px;
+            translate: (-50%,-50%);
+            /*矢印の形状*/    
+            width: 4px;
+            height: 4px;
+            border-top: 2px solid #1d663c;
+            border-right: 2px solid #1d663c;
+            transform: rotate(45deg);
+        }
     }
 }
