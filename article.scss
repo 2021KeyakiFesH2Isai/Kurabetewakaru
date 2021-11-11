@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    width: 100%;
+    background-color: #f0f7f1;
+
+}
+
+#nav{
+    a{
+        color: #0c2b1b;
+        text-decoration: none;
+        line-height: 50px;
+        margin: auto;
+        font-size: 18px;
+    }
+}
+
+#link{
+    margin: 20px 5%;
+    a{
+        color: #0c2b1b;
+        text-decoration: none;
+    }
+}
+
+.article{
+    background-color: #fff;
+    margin: 30px auto;
+    width: 70%;
+    max-width: 1000px;
+    border-radius: 15px;
+    display: flex;
+    align-self: flex-start;
+    justify-content: space-around;
+
+}
+
+.linkGroup{
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 10px;
+    gap: 10px;
+    max-width: 1476px;
+
+    a{
+        color: #0c2b1b;
+        text-decoration: none;
+        display: block;
+        width: 200px;
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid #0c2b1b;
+        text-align: center;
+        background-color: #fff;
+        position: relative;
+
+        &::after{
+            content: '';
+            /*絶対配置で矢印の位置を決める*/
+            position: absolute;
+            top: 0px;
+            left: -1px;
+            translate: (-50%,-50%);
+            /*矢印の形状*/    
+            width: 4px;
+            height: 40px;
+            background-color: #0c2b1b;
+
+        }
+
+    }
+}
