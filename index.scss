@@ -14,6 +14,9 @@ body {
     padding: 0;
     margin: 0;
     height: calc(100vh-120px); /*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+    @media (max-width: 516px){
+        height: calc(60vh-120px);
+    }
     /*　背景画像設定　*/
 
     .slider-item01 {
@@ -31,6 +34,9 @@ body {
     .slider-item {
         width: 100%; /*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
         height: calc(100vh - 120px); /*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+            @media (max-width: 516px){
+        height: calc(60vh-120px);
+    }
         background-repeat: no-repeat; /*背景画像をリピートしない*/
         background-position: center; /*背景画像の位置を中央に*/
         background-size: cover; /*背景画像が.slider-item全体を覆い表示*/
@@ -96,6 +102,16 @@ body {
     .slick-dots .slick-active button {
         background: #333; /*ドットボタンの現在地表示の色*/
     }
+
+}
+
+.wrapper{
+    h1{
+        font-size: 50px;
+        @media (max-width: 400px){
+            font-size: 10vw;
+        }
+    }
 }
 
 .nav-content{
@@ -121,6 +137,9 @@ body {
         height: 25%;
         width: 100%;
         cursor: pointer;
+        @media (max-width: 545px){
+            font-size: 2vw;
+        }
     }
 }
 
@@ -130,6 +149,7 @@ body {
     width: 25%;
     margin: 10px;
     margin-bottom: auto;
+
 
     img{
         width: 100%;
@@ -150,6 +170,11 @@ body {
         text-align: center;
         transition: 0.3s ease;
         cursor: pointer;
+        @media (max-width: 516px){
+            width: 16vw;
+            font-size: 5%;
+            padding-left: 15px;
+        }
 
         &:hover{
             background-color: #1d663c;
@@ -229,6 +254,10 @@ body {
         position: relative;
         display: block;
         width: 200px;
+        @media (max-width: 516px){
+            width: 30vw;
+            padding-left: 15px;
+        }
         margin: auto;
         line-height: 40px;
         border: 3px solid #fff;
@@ -287,6 +316,10 @@ body {
         position: relative;
         display: block;
         width: 200px;
+        @media (max-width: 516px){
+            width: 30vw;
+            padding-left: 15px;
+        }
         margin: auto;
         line-height: 40px;
         border: 3px solid #1d663c;

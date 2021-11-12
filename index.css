@@ -21,6 +21,12 @@ body {
   /*ドットナビゲーションの設定*/
 }
 
+@media (max-width: 516px) {
+  .slider {
+    height: calc(60vh-120px);
+  }
+}
+
 .slider .slider-item01 {
   background: url(Images/PlaceHolder.jpg);
 }
@@ -44,6 +50,12 @@ body {
   /*背景画像の位置を中央に*/
   background-size: cover;
   /*背景画像が.slider-item全体を覆い表示*/
+}
+
+@media (max-width: 516px) {
+  .slider .slider-item {
+    height: calc(60vh-120px);
+  }
 }
 
 .slider .slick-prev,
@@ -116,6 +128,16 @@ body {
   /*ドットボタンの現在地表示の色*/
 }
 
+.wrapper h1 {
+  font-size: 50px;
+}
+
+@media (max-width: 400px) {
+  .wrapper h1 {
+    font-size: 10vw;
+  }
+}
+
 .nav-content {
   margin: 10px;
   display: block;
@@ -143,6 +165,12 @@ body {
   height: 25%;
   width: 100%;
   cursor: pointer;
+}
+
+@media (max-width: 545px) {
+  .nav-content p {
+    font-size: 2vw;
+  }
 }
 
 .compare-nav-content {
@@ -174,6 +202,14 @@ body {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   cursor: pointer;
+}
+
+@media (max-width: 516px) {
+  .compare-nav-content a {
+    width: 16vw;
+    font-size: 5%;
+    padding-left: 15px;
+  }
 }
 
 .compare-nav-content a:hover {
@@ -274,6 +310,13 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 516px) {
+  #problem a {
+    width: 30vw;
+    padding-left: 15px;
+  }
+}
+
 #problem a:hover {
   background-color: #fff;
   color: #37AB69;
@@ -337,6 +380,13 @@ body {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   cursor: pointer;
+}
+
+@media (max-width: 516px) {
+  #effort a {
+    width: 30vw;
+    padding-left: 15px;
+  }
 }
 
 #effort a:hover {
