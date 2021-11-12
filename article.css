@@ -13,6 +13,12 @@ body {
   font-size: 18px;
 }
 
+@media (max-width: 900px) {
+  #nav a {
+    display: none;
+  }
+}
+
 #link {
   margin: 20px 5%;
 }
@@ -37,6 +43,38 @@ body {
       justify-content: space-around;
 }
 
+@media (max-width: 900px) {
+  .article {
+    width: 98%;
+  }
+}
+
+@media (max-width: 900px) {
+  .article {
+    display: block;
+  }
+}
+
+.article #article-text {
+  width: 70%;
+}
+
+@media (max-width: 900px) {
+  .article #article-text {
+    width: 100%;
+  }
+}
+
+.article #article-sub {
+  width: 20%;
+}
+
+@media (max-width: 900px) {
+  .article #article-sub {
+    width: 100%;
+  }
+}
+
 .linkGroup {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -44,6 +82,9 @@ body {
   padding: 10px;
   gap: 10px;
   max-width: 1476px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .linkGroup a {
@@ -57,6 +98,12 @@ body {
   text-align: center;
   background-color: #fff;
   position: relative;
+}
+
+@media (max-width: 432px) {
+  .linkGroup a {
+    margin: auto;
+  }
 }
 
 .linkGroup a::after {
