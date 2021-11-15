@@ -202,6 +202,8 @@ body {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   cursor: pointer;
+  color: #0c2b1b;
+  text-decoration: none;
 }
 
 @media (max-width: 516px) {
