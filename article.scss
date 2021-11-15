@@ -6,7 +6,12 @@ body {
 }
 
 #nav{
-    a{
+    position: fixed;
+    display: flex; 
+    height: 50px;
+    width: 100%;
+    background-color: #f0f7f1;
+    .nav-a{
         color: #0c2b1b;
         text-decoration: none;
         line-height: 50px;
@@ -14,6 +19,59 @@ body {
         font-size: 18px;
         @media (max-width: 900px){
             display: none;
+        }
+    }
+    #nav-ham{
+        height: 160px; 
+        width: fit-content; 
+        background-color: #f0f7f1; 
+        position: absolute; 
+        right: -200px; 
+        top:50px;
+        transition: 0.5s;
+        
+        a{
+            display: block;
+            color: #0c2b1b;
+            text-decoration: none;
+            line-height: 40px;
+            font-size: 18px;
+            padding: 0 10px 0 15px;
+            position: relative;
+            &::after{
+                content: '';
+                /*絶対配置で矢印の位置を決める*/
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                translate: (-50%,-50%);
+                /*矢印の形状*/    
+                width: 5px;
+                height: 30px;
+                background-color: #1d663c;
+            }
+        }
+    }
+
+    #nav-check{
+        display: none;
+        &:checked{
+            ~ #nav-ham{
+                right: 0px;
+
+            }
+        }
+    }
+
+    #nav-checkImg{
+        display: none;
+        padding:4px;
+        @media (max-width: 900px){
+            display: block;
+        }
+        img{
+            height: 100%;
+            
         }
     }
 }
@@ -54,6 +112,16 @@ body {
         @media (max-width: 900px){
             width: 100%;
         }
+        .sub-image{
+            object-fit: contain;
+            display: block; 
+            margin: 20px 0 0 0;
+            width: 100%;
+            @media (max-width: 900px){
+                width: 50%;
+                margin: 10px;
+            }
+        }
     }
 }
 
@@ -76,11 +144,15 @@ body {
         text-align: center;
         background-color: #fff;
         position: relative;
+        transition: 0.3s;
 
         @media (max-width: 432px){
             margin: auto;
         }
-
+        &:hover{
+            background-color: #0c2b1b;
+            color: #fff;
+        }
         &::after{
             content: '';
             /*絶対配置で矢印の位置を決める*/

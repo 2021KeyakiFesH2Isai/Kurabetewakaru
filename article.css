@@ -5,7 +5,17 @@ body {
   background-color: #f0f7f1;
 }
 
-#nav a {
+#nav {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  background-color: #f0f7f1;
+}
+
+#nav .nav-a {
   color: #0c2b1b;
   text-decoration: none;
   line-height: 50px;
@@ -14,9 +24,68 @@ body {
 }
 
 @media (max-width: 900px) {
-  #nav a {
+  #nav .nav-a {
     display: none;
   }
+}
+
+#nav #nav-ham {
+  height: 160px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #f0f7f1;
+  position: absolute;
+  right: -200px;
+  top: 50px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#nav #nav-ham a {
+  display: block;
+  color: #0c2b1b;
+  text-decoration: none;
+  line-height: 40px;
+  font-size: 18px;
+  padding: 0 10px 0 15px;
+  position: relative;
+}
+
+#nav #nav-ham a::after {
+  content: '';
+  /*絶対配置で矢印の位置を決める*/
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  translate: -50%, -50%;
+  /*矢印の形状*/
+  width: 5px;
+  height: 30px;
+  background-color: #1d663c;
+}
+
+#nav #nav-check {
+  display: none;
+}
+
+#nav #nav-check:checked ~ #nav-ham {
+  right: 0px;
+}
+
+#nav #nav-checkImg {
+  display: none;
+  padding: 4px;
+}
+
+@media (max-width: 900px) {
+  #nav #nav-checkImg {
+    display: block;
+  }
+}
+
+#nav #nav-checkImg img {
+  height: 100%;
 }
 
 #link {
@@ -75,6 +144,21 @@ body {
   }
 }
 
+.article #article-sub .sub-image {
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+  margin: 20px 0 0 0;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .article #article-sub .sub-image {
+    width: 50%;
+    margin: 10px;
+  }
+}
+
 .linkGroup {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -98,12 +182,19 @@ body {
   text-align: center;
   background-color: #fff;
   position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 @media (max-width: 432px) {
   .linkGroup a {
     margin: auto;
   }
+}
+
+.linkGroup a:hover {
+  background-color: #0c2b1b;
+  color: #fff;
 }
 
 .linkGroup a::after {
