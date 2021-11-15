@@ -13,6 +13,7 @@ body {
   height: 50px;
   width: 100%;
   background-color: #f0f7f1;
+  z-index: 10;
 }
 
 #nav .nav-a {
@@ -75,6 +76,7 @@ body {
 
 #nav #nav-checkImg {
   display: none;
+  cursor: pointer;
   padding: 4px;
 }
 
@@ -128,9 +130,35 @@ body {
   width: 70%;
 }
 
+.article #article-text h2 {
+  padding-left: 13px;
+  position: relative;
+}
+
+.article #article-text h2::after {
+  content: '';
+  /*絶対配置で矢印の位置を決める*/
+  position: absolute;
+  top: 0px;
+  left: 3px;
+  translate: -50%, -50%;
+  /*矢印の形状*/
+  width: 5px;
+  height: 35px;
+  background-color: #1d663c;
+}
+
 @media (max-width: 900px) {
   .article #article-text {
-    width: 100%;
+    width: 95%;
+    margin: auto;
+  }
+  .article #article-text h2 {
+    padding-top: 10px;
+  }
+  .article #article-text h2::after {
+    height: 40px;
+    top: 8px;
   }
 }
 
@@ -140,7 +168,8 @@ body {
 
 @media (max-width: 900px) {
   .article #article-sub {
-    width: 100%;
+    width: 95%;
+    margin: auto;
   }
 }
 
@@ -152,10 +181,13 @@ body {
   width: 100%;
 }
 
+.article #article-sub .sub-text {
+  margin-top: 0px;
+}
+
 @media (max-width: 900px) {
-  .article #article-sub .sub-image {
-    width: 50%;
-    margin: 10px;
+  .article #article-sub .sub-text-margin {
+    display: none;
   }
 }
 
@@ -169,6 +201,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 0;
+  position: relative;
 }
 
 .linkGroup a {

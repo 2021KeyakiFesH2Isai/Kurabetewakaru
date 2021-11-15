@@ -14,13 +14,25 @@
 
 <body>
     <!--nav-->
-    <div id="nav" style="display: flex; height: 50px;">
-        <img src="Images/main-icon.png" alt="" style="height: 100%; object-fit: contain;">
-        <a href="" style="margin-left: 20%;">くらべてみる</a>
-        <a href="">課題を考える</a>
-        <a href="">取り組みをみる</a>
-        <a href="">About Us</a>
-    </div>
+    <div id="nav">
+        <img src="Images/main-icon.png" alt="" style="height: 100%; object-fit: contain; cursor: pointer; padding: 8px; box-sizing: border-box;" onclick="location.href='index.html'">
+        <a href="" class="nav-a" style="margin-left: 20%;">くらべてみる</a>
+        <a href="" class="nav-a">課題を考える</a>
+        <a href="" class="nav-a">取り組みをみる</a>
+        <a href="" class="nav-a">About Us</a>
+
+        <!--ハンバーガー-->
+        <input id="nav-check" type="checkbox" >
+        <label id="nav-checkImg" style="margin-left: auto;" for="nav-check"><img src="Images/ham-icon.png" alt="menu"></label>
+
+        <div id="nav-ham">
+            <a href="">くらべてみる</a>
+            <a href="">課題を考える</a>
+            <a href="">取り組みをみる</a>
+            <a href="">About Us</a>
+        </div>
+    </div>    
+    <div style="height: 50px;"></div>
 
     <!--リンク-->
     <p id="link">
@@ -62,8 +74,7 @@
 
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </body>
 
 </html>
