@@ -68,6 +68,7 @@ body {
 
 #nav #nav-check {
   display: none;
+  margin-left: auto;
 }
 
 #nav #nav-check:checked ~ #nav-ham {
@@ -78,6 +79,7 @@ body {
   display: none;
   cursor: pointer;
   padding: 4px;
+  margin-left: auto;
 }
 
 @media (max-width: 900px) {
