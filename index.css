@@ -28,15 +28,19 @@ body {
 }
 
 .slider .slider-item01 {
-  background: url(Images/PlaceHolder.jpg);
+  background: url(Images/school-img.jpg);
 }
 
 .slider .slider-item02 {
-  background: url(Images/PlaceHolder_2.jpg);
+  background: url(Images/library-img.jpg);
 }
 
 .slider .slider-item03 {
-  background: url(Images/PlaceHolder.jpg);
+  background: url(Images/jump-img.jpg);
+}
+
+.slider .slider-item04 {
+  background: url(Images/dome-img.jpg);
 }
 
 .slider .slider-item {
